@@ -40,7 +40,7 @@ public class ClientController {
             return "ClientSuccess";
         }
     }
-  
+  //Il s'agit d'un test
     @RequestMapping(method = RequestMethod.GET)
     public String initForm(ModelMap model) {
 
