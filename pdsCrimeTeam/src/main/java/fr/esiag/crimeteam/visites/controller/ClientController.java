@@ -49,10 +49,10 @@ public class ClientController {
         // Identifiant
 
         // Prénom
-        client.setFirstname("Prénom");
+        client.setFirstname("");
 
         // Nom
-        client.setLastname("Nom");
+        client.setLastname("");
 
         //command object
         model.addAttribute("client", client);

@@ -5,7 +5,7 @@
 
 <html>
     <head>
-        <title>CRIME TEAM - Plannifier VISITE</title>
+        <title><spring:message code="label.titre" /></title>
         <link href="<c:url value='/resources/css/crimeteam.css'/>" rel="stylesheet" type="text/css">
     </head>
 
@@ -26,7 +26,7 @@
                     <td align="center" valign="top" width="250"></td>
                     <td colspan="2">
                         <font color="#000000" face="Arial" size="6">
-                            <b>CUSTOMER RELATIONSHIP MANAGEMENT</b>
+                            <b><spring:message code="label.titre" /></b>
                         </font>
                     </td>
                 </tr>
@@ -47,7 +47,7 @@
                     <tr> 
                         <td valign="top" colspan="2">
                             <font size="3" color="#CC0000" face="Arial">
-                                <b><spring:message code="label.soustitre" /></b>
+                                <b>Client: </b>
                             </font> 
                             <hr color="#CC0000" size="1" noshade>
                         </td>

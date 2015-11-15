@@ -16,10 +16,10 @@ public class ClientValidator implements Validator {
     public void validate(Object target, Errors errors) {
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "lastname",
-                "required.lastname", "Champ Nom est requis.");
+                "required.svisitepren", "Champ Prénom est requis.");
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "firstname",
-                "required.firstname", "Champ Nom est requis.");
+                "required.svisitenom", "Champ Nom est requis.");
 
         Client inscript = (Client) target;
 
