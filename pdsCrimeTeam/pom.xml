@@ -19,7 +19,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>${org.springframework.version}</version>
 			<exclusions>
 				<!-- Exclude Commons Logging in favor of SLF4j -->
 				<exclusion>
@@ -27,9 +26,20 @@
 					<artifactId>commons-logging</artifactId>
 				</exclusion>
 			</exclusions>
+			<version>${org.springframework.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+            <version>${org.springframework.version}</version>
+		</dependency>
+		  <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+		<dependency>
+		<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
@@ -111,6 +121,16 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-maven-plugin</artifactId>
+			<version>4.3.1.Final</version>
+		</dependency>
 	</dependencies>
 	<repositories>
 		<!-- For Hibernate Validator -->
@@ -145,6 +165,25 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
+					<execution>
+						<id>delete_properties</id>
+						<phase>test</phase>
+						<configuration>
+							<tasks>
+								<path id="classpath">
+									<fileset dir="${settings.localRepository}" includes="**/*.jar" />
+								</path>
+								<echo message="===========================================" />
+								<echo message="Delete the properties from the jar" />
+								<echo message="===========================================" />
+								<delete>
+									<fileset dir="target/classes" includes="*.properties*" />
+									<fileset dir="target/classes" includes="*.xml" />
+								</delete>
+							</tasks>
+						</configuration>
+						
+					</execution>
 					<execution>
 						<id>install</id>
 						<phase>install</phase>
