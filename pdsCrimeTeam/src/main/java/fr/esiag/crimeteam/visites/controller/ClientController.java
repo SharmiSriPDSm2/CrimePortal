@@ -17,18 +17,19 @@ import org.springframework.web.bind.support.SessionStatus;
 
 // test BNG
 // this is test Marouane
+//c'est le test de Eve pck ca marche !!
 //toto
 @Controller
 @RequestMapping("/client")
 public class ClientController {
-// A l'entrée, on déclare le variable clientValidator 
+// A l'entrï¿½e, on dï¿½clare le variable clientValidator 
     ClientValidator clientValidator;
 // test RDurand
     @Autowired
     public ClientController(ClientValidator clientValidator) {
         this.clientValidator = clientValidator;
     }
-//Le modèle attribut est créé
+//Le modï¿½le attribut est crï¿½ï¿½
     @RequestMapping(method = RequestMethod.POST)
     public String processSubmit(
             @ModelAttribute("client") Client client,
