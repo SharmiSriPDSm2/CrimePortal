@@ -13,12 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 
+//ceci est un test
+
 @Controller
 @RequestMapping("/client")
 public class ClientController {
 // A l'entrée, on déclare le variable clientValidator 
     ClientValidator clientValidator;
-
+// test RDurand
     @Autowired
     public ClientController(ClientValidator clientValidator) {
         this.clientValidator = clientValidator;
