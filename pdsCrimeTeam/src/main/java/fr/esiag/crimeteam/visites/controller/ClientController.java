@@ -15,6 +15,8 @@ import org.springframework.web.bind.support.SessionStatus;
 
 //ceci est un 
 
+// test BNG
+
 @Controller
 @RequestMapping("/client")
 public class ClientController {
