@@ -49,14 +49,14 @@
 							</tr>
 
 							<tr>
-								<td class="nTexte">Nom :</td>
+								<td class="nTexte"><spring:message code="label.svisitenom" /></td>
 								<td><form:input path="firstname" size="42"
 										maxlength="30" /> <form:errors path="firstname"
 										cssClass="error" /></td>
 							</tr>
 
 							<tr>
-								<td class="nTexte">Prénom :</td>
+								<td class="nTexte"><spring:message code="label.svisitepren" /></td>
 								<td><form:input path="lastname" size="42"
 										maxlength="30" /> <form:errors path="lastname"
 										cssClass="error" /></td>
