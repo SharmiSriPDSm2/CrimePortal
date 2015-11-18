@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration SYSTEM "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+<property name="dialect">org.hibernate.dialect.Oracle9Dialect</property>
+<mapping resource="com/bnpparibas/eqd/calypso/monitor/common/dal/dao/engine/EngineEventDAO.hbm.xml"/>
+<mapping resource="fr/esiag/crimeteam/visites/model/Client.hbm.xml"/>
+
+</session-factory>
+</hibernate-configuration>
