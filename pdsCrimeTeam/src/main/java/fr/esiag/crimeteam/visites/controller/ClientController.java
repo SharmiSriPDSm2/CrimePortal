@@ -17,7 +17,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 // test BNG
 // this is test Marouane
-
+//toto
 @Controller
 @RequestMapping("/client")
 public class ClientController {
