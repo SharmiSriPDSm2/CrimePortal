@@ -20,7 +20,7 @@ import org.springframework.web.bind.support.SessionStatus;
 public class ClientController {
 // A l'entrée, on déclare le variable clientValidator 
     ClientValidator clientValidator;
-
+// test RDurand
     @Autowired
     public ClientController(ClientValidator clientValidator) {
         this.clientValidator = clientValidator;
