@@ -17,7 +17,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 // test BNG
 // this is test Marouane
-//c'est le test de Eve pck ca marche !!
+//c'est le test de Eve pck ca marche !! ou pas
 //toto
 @Controller
 @RequestMapping("/client")
