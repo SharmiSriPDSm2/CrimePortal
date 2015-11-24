@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
-
+//test bohbot
 //ceci est un tzqt JLI
 
 // test BNG
 // this is test Marouane
-//c'est le test de Eve pck ca marche !!
+//c'est le test de Eve pck ca marche !! ou pas
 //toto
 @Controller
 @RequestMapping("/client")
