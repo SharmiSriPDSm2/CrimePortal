@@ -12,6 +12,6 @@
     <property name="hibernate.current_session_context_class">thread</property>
     
     <property name="hibernate.hbm2ddl.auto">create-drop</property>
-<mapping resource="fr/esiag/crimeteam/visites/model/Client.hbm.xml"/>
+<mapping resource="Client.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
