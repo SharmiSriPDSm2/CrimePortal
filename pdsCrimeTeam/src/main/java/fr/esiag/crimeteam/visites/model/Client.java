@@ -1,10 +1,12 @@
 package fr.esiag.crimeteam.visites.model;
 
 
-public class Client  implements java.io.Serializable {
 
-     /**
+public class Client  implements java.io.Serializable {
+	/**
 	 * 
+	 * @hibernate.class table = "client"
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private int id;
@@ -13,13 +15,16 @@ public class Client  implements java.io.Serializable {
 
     public Client() {
     }
-
+ 
     public Client(int id, String firstname, String lastname) {
        this.id = id;
        this.firstname = firstname;
        this.lastname = lastname;
     }
-   
+    /**
+     * 
+     * @hibernate.id generator-class = "increment" column = "ID"
+     */
     public int getId() {
         return this.id;
     }
@@ -28,6 +33,11 @@ public class Client  implements java.io.Serializable {
         this.id = id;
     }
     
+    
+    /**
+     * 
+     * @hibernate.property column = "Firstname"
+     */
     public String getFirstname() {
         return this.firstname;
     }
@@ -36,7 +46,10 @@ public class Client  implements java.io.Serializable {
         this.firstname = firstname;
     }
 
-    
+    /**
+     * 
+     * @hibernate.property column = "Lastname"
+     */
     public String getLastname() {
         return this.lastname;
     }
@@ -44,6 +57,7 @@ public class Client  implements java.io.Serializable {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
+  
 
 }
 

@@ -1,23 +1,22 @@
 package fr.esiag.crimeteam.visites.model;
 
-import java.io.File;
 
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
 
-    private static final SessionFactory sessionFactory;
+    private static SessionFactory sessionFactory;
     
     public static SessionFactory getSessionfactory() {
 		return sessionFactory;
 	}
 
-	public static final ThreadLocal<Session> session = new ThreadLocal<Session>();
-    
-    static {
+	public final static ThreadLocal<Session> session = new ThreadLocal<Session>();
+    static
+    {
         try {
-            sessionFactory = new Configuration().configure("src/hibernate.cfg.xml").buildSessionFactory();
+            sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
         } 
         catch (Exception e) {
             System.out.println("cannot get hibernate factory " + e.getMessage());

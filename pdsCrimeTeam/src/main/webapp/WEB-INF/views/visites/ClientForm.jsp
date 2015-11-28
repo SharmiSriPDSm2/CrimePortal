@@ -20,7 +20,7 @@
 				<td align="center" valign="top" width="250"></td>
 
 				<td style="text-align: center; width: 400px;"><img
-					style="width: 258px; height: 95px;" alt="CNRS"
+					style="width: 258px; height: 95px;" alt="CRM"
 					src="<c:url value="/resources/images/logos/CRM.jpg"/>"></td>
 				<td style="width: 400px; text-align: center;"><img
 					style="width: 306px; height: 82px;" alt="CRIME"

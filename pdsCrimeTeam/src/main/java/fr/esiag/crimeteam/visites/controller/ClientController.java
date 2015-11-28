@@ -1,9 +1,13 @@
 package fr.esiag.crimeteam.visites.controller;
 
+import java.util.List;
+
 import fr.esiag.crimeteam.visites.model.Client;
+import fr.esiag.crimeteam.visites.model.Clients;
+import fr.esiag.crimeteam.visites.model.HibernateUtil;
 import fr.esiag.crimeteam.visites.validator.ClientValidator;
 
-
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -43,6 +47,13 @@ public class ClientController {
         } else {
             status.setComplete();
             //form success
+            Clients clients=new Clients();
+            clients.addClient(client);
+            List<Client> liste=clients.listClients();
+            for(int i=0;i<liste.size();i++){
+            System.out.print(liste.get(i).getFirstname()+ " "+liste.get(i).getLastname());
+            }
+            
             return "ClientSuccess";
         }
     }
