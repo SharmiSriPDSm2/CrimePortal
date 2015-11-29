@@ -44,15 +44,15 @@ public class ClientController {
         if (result.hasErrors()) {
             //if validator failed
             return "ClientForm";
-        } else {
+        } else { // Bilal work on JSON message
             status.setComplete();
             //form success
             Clients clients=new Clients();
             clients.addClient(client);
             List<Client> liste=clients.listClients();
             for(int i=0;i<liste.size();i++){
-            System.out.print(liste.get(i).getFirstname()+ " "+liste.get(i).getLastname());
-            }
+            System.out.print(liste.get(i).getFirstname()+ " " +liste.get(i).getLastname());
+        }
             
             return "ClientSuccess";
         }
